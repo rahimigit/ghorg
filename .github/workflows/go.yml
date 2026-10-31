@@ -1,6 +1,9 @@
 # Running locally https://yonatankra.com/how-to-test-github-actions-locally-using-act/
 name: Go
-on: [push, pull_request]
+on:
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
+
 jobs:
   build_and_test:
     name: Build and Test
